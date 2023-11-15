@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --body-color: #f8fafc;
+  --card-color: #fff;
+  --logo-1: #6366f1;
+  --logo-2: #f97316;
+  --logo-3: #06b6d4;
+  --title-color: #0f172a;
+  --content-color: #64748b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.card-1 .logo span {
+  background: var(--logo-1);
+}
+.card-2 .logo span {
+  background: var(--logo-2);
+}
+.card-3 .logo span {
+  background: var(--logo-3);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--body-color);
+}
+
+body.dark {
+  --body-color: #1e293b;
+  --card-color: #0f172a;
+  --title-color: #fff;
+}
+
+.card-wrapper {
+  max-width: 1280px;
+  margin: 10rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card-color);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card .logo span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card .logo span i {
+  font-size: 1.4rem;
+  color: var(--card-color);
+}
+
+.card .title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--title-color);
+  line-height: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.card .text-body {
+  display: flex;
+  align-items: center;
+  color: var(--content-color);
+  margin-top: 0.5rem;
+}
+
+.text-body .desc {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.text-body span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.text-body span i {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.toggle {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--title-color);
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.toggle i {
+  font-size: 1.75rem;
+  color: var(--body-color);
+}
+
+@media (max-width: 1024px) {
+  .card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .card-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

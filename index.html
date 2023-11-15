@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Responsive Simple Card | ZainCode</title>
+  </head>
+  <body>
+    <div class="toggle">
+      <i class="ri-moon-clear-line toggle-dark"></i>
+    </div>
+    <div class="card-wrapper">
+      <a href="#" class="card card-1">
+        <div class="logo">
+          <span class="">
+            <i class="ri-javascript-line"></i>
+          </span>
+        </div>
+        <h3 class="title">Learn Javascript</h3>
+        <div class="text-body">
+          <p class="desc">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
+            ipsam repudiandae dolor! Quis reprehenderit laborum numquam cum unde
+            sint quam accusamus iure hic corporis vel, fugit, inventore cumque
+            libero dolore omnis illo qui repellat minus at quisquam aspernatur
+            assumenda rem.
+          </p>
+          <span>
+            <i class="ri-arrow-right-s-line"></i>
+          </span>
+        </div>
+      </a>
+      <a href="#" class="card card-2">
+        <div class="logo">
+          <span>
+            <i class="ri-css3-line"></i>
+          </span>
+        </div>
+        <h3 class="title">Learn CSS</h3>
+        <div class="text-body">
+          <p class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium, eligendi.
+          </p>
+          <span>
+            <i class="ri-arrow-right-s-line"></i>
+          </span>
+        </div>
+      </a>
+      <a href="#" class="card card-3">
+        <div class="logo">
+          <span>
+            <i class="ri-html5-line"></i>
+          </span>
+        </div>
+        <h3 class="title">Learn HTML</h3>
+        <div class="text-body">
+          <p class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium, eligendi.
+          </p>
+          <span>
+            <i class="ri-arrow-right-s-line"></i>
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <script>
+      const btnDark = document.querySelector(".toggle");
+      const icon = document.querySelector(".toggle i");
+      const body = document.querySelector("body");
+      btnDark.addEventListener("click", () => {
+        icon.classList.toggle("ri-sun-line");
+        body.classList.toggle("dark");
+      });
+    </script>
+  </body>
+</html>
